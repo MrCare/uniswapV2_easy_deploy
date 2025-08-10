@@ -3,7 +3,7 @@
  * @Date: 2025-08-10 12:47:42
 -->
 ### 部署要点
-1. 安装 node.js 14 以兼容依赖
+1. 安装 node.js 10 以兼容依赖
 ```shell
 nvm install 10
 nvm use 10
@@ -78,6 +78,11 @@ $ mocha
 
 ```
 2. 执行部署脚本：先部署factory，再查到 pair 的hash 替换 periphery 中的魔法值，最后部署合约，完成添加流动性测试
+
+```shell
+nvm use 24 # 切换回24
+node deploy.js
+```
 
 ```shell
 (base) ➜  uniswapV2_easy_deploy node deploy.js
